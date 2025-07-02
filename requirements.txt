@@ -1,0 +1,11 @@
+torch==2.7.1
+torchvision==0.22.1
+numpy==2.3.1
+pandas==2.3.0
+scikit-learn==1.7.0
+pytorchcv==0.0.73
+opencv-python==4.11.0.86
+tqdm==4.67.1
+notebook==7.4.4
+ipykernel==6.29.5
+ucimlrepo==0.0.7

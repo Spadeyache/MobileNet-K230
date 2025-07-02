@@ -1,0 +1,21 @@
+digraph
+{
+    "\"0\"" [ label = input_322, shape = rectangle ]
+    "\"1\"" [ label = "obj.2_323", shape = rectangle ]
+    "\"2\"" [ label = <<table border="0" cellborder="1" cellspacing="0"><tr><td>Call</td><td>func_45</td><td port="P0">ddrIf</td></tr><tr><td colspan="3">f32[1,1,1,29]</td></tr></table>>, shape = plain ]
+    "\"4\"" [ label = <<table border="0" cellborder="1" cellspacing="0"><tr><td>Call</td><td>func_44</td><td port="P0">ddrIf</td></tr><tr><td colspan="3">u8[1,512,1,1]</td></tr></table>>, shape = plain ]
+    "\"6\"" [ label = <<table border="0" cellborder="1" cellspacing="0"><tr><td>Call</td><td>func_43</td><td port="P0">ddrIf</td></tr><tr><td colspan="3">u8[1,1,1,512]</td></tr></table>>, shape = plain ]
+    "\"8\"" [ label = <<table border="0" cellborder="1" cellspacing="0"><tr><td>Call</td><td>Concat(Axis: 3)</td><td port="P0">inputs</td></tr><tr><td colspan="3">u8[1,1,1,1344]</td></tr></table>>, shape = plain ]
+    "\"10\"" [ label = <<table border="0" cellborder="1" cellspacing="0"><tr><td>Call</td><td>func_41</td><td port="P0">ddrIf</td></tr><tr><td colspan="3">u8[1,1,1,1024]</td></tr></table>>, shape = plain ]
+    "\"12\"" [ label = <<table border="0" cellborder="1" cellspacing="0"><tr><td>Call</td><td>func_42</td><td port="P0">ddrIf</td></tr><tr><td colspan="3">u8[1,1,1,320]</td></tr></table>>, shape = plain ]
+    "\"9\"" [ label = <<table border="0" cellborder="1" cellspacing="0"><tr><td>Tuple</td><td port="P0"></td><td port="P1"></td></tr></table>>, shape = plain ]
+
+    "\"0\"" -> "\"10\"":P0
+    "\"1\"" -> "\"12\"":P0
+    "\"10\"" -> "\"9\"":P0
+    "\"12\"" -> "\"9\"":P1
+    "\"9\"" -> "\"8\"":P0
+    "\"8\"" -> "\"6\"":P0
+    "\"6\"" -> "\"4\"":P0
+    "\"4\"" -> "\"2\"":P0
+}
